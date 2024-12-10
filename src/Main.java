@@ -28,7 +28,7 @@ public class Main {
         // которую мы ищем по автору. В задании этого не было, но без этого блока
         // нельзя взять книгу созданную в статическом блоке.
 
-        // Ищем книги автора "Лев Толстой"
+        // Ищем книги автора "Рэй Брэдбери"
         String authorToSearch = "Рэй Брэдбери";
         List<Book> booksByAuthor = library.findBooksByAuthor(authorToSearch);
 
