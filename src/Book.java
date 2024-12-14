@@ -67,9 +67,9 @@ public class Book {
     public void displayInfo() {
         System.out.printf(
                 "Название: %s%nАвтор: %s%nГод издания: %s%nДоступность: %s%n%n",
-                title,
-                author,
-                year == 0 ? "не указан" : Integer.toString(year),
+                getTitle(),
+                getAuthor(),
+                getYear() == 0 ? "не указан" : Integer.toString(year),
                 isAvailable ? "В наличии" : "Нет в наличии"
         );
     }
