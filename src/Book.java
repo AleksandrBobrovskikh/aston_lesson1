@@ -50,7 +50,7 @@ public class Book {
     // Делает книгу недоступной, если была доступна
     public void borrowBook() {
         if (isAvailable) {
-            isAvailable = false;
+            setAvailable(false);
             System.out.println("Книга \"" + title + "\" взята.\n");
         } else {
             System.out.println("Книга \"" + title + "\" недоступна.\n");
@@ -65,9 +65,12 @@ public class Book {
 
     // Выводит на экран информацию о книге
     public void displayInfo() {
-        System.out.println("Название: " + title);
-        System.out.println("Автор: " + author);
-        System.out.println("Год издания: " + (year != 0 ? year : "не указан"));
-        System.out.println("Доступность: " + (isAvailable ? "В наличии\n" : "Нет в наличии\n"));
+        System.out.printf(
+                "Название: %s%nАвтор: %s%nГод издания: %s%nДоступность: %s%n%n",
+                title,
+                author,
+                year == 0 ? "не указан" : Integer.toString(year),
+                isAvailable ? "В наличии" : "Нет в наличии"
+        );
     }
 }
